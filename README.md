@@ -19,9 +19,15 @@ This is a example on how i personally structure all of my discord bots for bette
 
 # Other
 For Support join our [Discord Server](https://discord.gg/VydyERgcxR)
+
 Check out my [Website](https://combogang.com)
-For my development services contact me through my
+
+For my development services contact me through my:
+
 Email: contact@combogang.com
+
 Discord Tag: combogang
+
 Instagram: combogangdev
+
 Twitter / X: combogangdev
