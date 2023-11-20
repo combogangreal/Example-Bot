@@ -3,6 +3,7 @@ A example discord.py bot with my preferred structure
 
 # Prerequisites
 [Python 311](https://www.python.org/downloads/release/python-3116/): Anything above python 3.11 or lower than 3.8 doesn't work with current discord.py, download one of those version
+
 [Discord Bot](https://discord.com/developers/applications): Must know how to get the bots token, and grabbing the user id of yourself, and the id of your support / test server
 
 # Running
