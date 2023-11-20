@@ -8,8 +8,19 @@ A example discord.py bot with my preferred structure
 
 # Running
 1. Run ```pip install -r requirements.txt``` or ```python -m pip install -r requirements.txt```
-2. Drag the example.env file into the bot folder, delete the example (make sure the name is just .env), then fill in the values.
-3. Run ```python launcher.py``` or ```python3 launcher.py```
+2. Drag the bot.env file into the bot folder, delete the bot part of the .env (make sure the name is just .env), then fill in the values.
+3. Run ```python launcher.py bot``` or ```python3 launcher.py bot```
+
+# Dashboard
+1. Run ```pip install -r requirements.txt``` or ```python -m pip install -r requirements.txt```
+2. Drag the dashboard.env file into the dashboards folder, delete the dashboard part of the .env(make sure the name is just .env), then fill in the values
+3. Run ```python launcher.py dashboard``` or ```python3 launcher.py dashboard```
+# Api
+1. Run ```pip install -r requirements.txt``` or ```python -m pip install -r requirements.txt```
+2.  Run ```python launcher.py api``` or ```python3 launcher.py api```
+
+### Note
+For futher help on starting, check out [here](./HELP.md)
 
 # Why
 This is a example on how i personally structure all of my discord bots for better organization, and ease of adding features.

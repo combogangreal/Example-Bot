@@ -1,6 +1,7 @@
 """
 
-Bot Example
+Dashboard Example
+Since 0.0.2
 
 """
 __author__ = "ComboGang"

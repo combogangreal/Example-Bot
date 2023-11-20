@@ -11,15 +11,16 @@ cur = cxn.cursor()
 
 
 def commit():
-	cxn.commit()
-	
+    cxn.commit()
+
 
 def with_commit(func):
-	def inner(*args, **kwargs):
-		func(*args, **kwargs)
-		commit()
+    def inner(*args, **kwargs):
+        func(*args, **kwargs)
+        commit()
 
-	return inner
+    return inner
+
 
 class Database:
     def __init__(self) -> None:
@@ -27,12 +28,9 @@ class Database:
 
     @with_commit
     def build(self):
-        """Builds the sqlite3 database from the ./data/build.sql file.
-        """
+        """Builds the sqlite3 database from the ./data/build.sql file."""
         if isfile(BUILD_PATH):
             self.scriptexec(BUILD_PATH)
-
-
 
     def autosave(self, sched: AsyncIOScheduler):
         """Schedules the database to commit any data to the database every minute.
@@ -42,14 +40,11 @@ class Database:
         """
         sched.add_job(commit, CronTrigger(second=0))
 
-
     def close(self):
-        """Closes the connection to the database.
-        """
+        """Closes the connection to the database."""
         cxn.close()
 
-
-    def field(command: str, *values: Any):
+    def field(self, command: str, *values: Any):
         """Executes a command with the given values and returns the first field.
 
         Args:
@@ -61,8 +56,7 @@ class Database:
         if (fetch := cur.fetchone()) is not None:
             return fetch[0]
 
-
-    def record(command: str, *values: Any):
+    def record(self, command: str, *values: Any):
         """Executes a command with the given values and returns the first record.
 
         Args:
@@ -72,7 +66,6 @@ class Database:
         cur.execute(command, tuple(values))
 
         return cur.fetchone()
-
 
     def records(command: str, *values: Any):
         """Executes a command with the given values and returns all records.
@@ -85,7 +78,6 @@ class Database:
 
         return cur.fetchall()
 
-
     def column(command: str, *values: Any):
         """Executes a command with the given values and returns the first column.
 
@@ -97,8 +89,7 @@ class Database:
 
         return [item[0] for item in cur.fetchall()]
 
-
-    def execute(command: str, *values: Any):
+    def execute(self, command: str, *values: Any):
         """Executes a command with the given values.
 
         Args:
@@ -107,8 +98,7 @@ class Database:
         """
         cur.execute(command, tuple(values))
 
-
-    def multiexec(command: str, valueset: List[Any]):
+    def multiexec(self, command: str, valueset: List[Any]):
         """Executes multiple commands with the given values.
 
         Args:
@@ -116,7 +106,6 @@ class Database:
             valueset (List[Any]): The values to insert into the command
         """
         cur.executemany(command, valueset)
-
 
     def scriptexec(self, path: str):
         """Executes a script from the given path.
