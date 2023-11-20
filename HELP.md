@@ -12,6 +12,7 @@ There you go! You have a bot, you can go through and Customize if you want, but 
 
 # Setting up the bot & Running it 
 1. Drag the "bot.env" file into the ./bot folder, and delete the "bot" part of it. Then fill in the values (If you don't know how to get those values, keep following this tutorial)
+
 ![How it should look like](./assests/botenv.png)
 
 2. Click the "Bot" tab on the left side of your created application
