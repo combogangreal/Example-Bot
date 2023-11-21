@@ -25,4 +25,5 @@ def user_id(user_id):
 
 @app.route("/api/users", methods=["GET"])
 def users():
+    """Gets all user data from our databse"""
     return jsonify(data.record("SELECT * FROM Users"))

@@ -1,7 +1,7 @@
 """
 
-Api Sample
-Since 0.0.2
+Cli for the example bot
+Since 0.0.3
 
 """
 __author__ = "ComboGang"
