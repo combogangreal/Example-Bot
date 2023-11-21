@@ -12,8 +12,8 @@ login = os.environ["OAUTH_URL"]
 
 
 class Oauth:
-    """ Used to simulate a oauth2 request which returns the user information
-    """
+    """Used to simulate a oauth2 request which returns the user information"""
+
     client_id = clientId
     client_secret = secret
     redirect_uri = os.environ["REDIRECT_URL"]

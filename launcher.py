@@ -7,6 +7,7 @@ from cli import cli
 
 bot = bot.Bot()
 
+
 async def main():
     """Main function, allows launching of the bot, api, dashboard, or cli"""
     if sys.argv[1] == "bot":
